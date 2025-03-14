@@ -1,0 +1,26 @@
+Livraria
+  Genreciar
+    livros
+      catalogo - 
+        INFORS: - OK
+          NOME
+          ANO
+          AUTHOR
+          PREÇO - COMPRA E locação
+          GENERO
+          
+        cadastrar livros no catalogo - OK
+        excluir livros do catalogo
+        alterar dados do livro no catalogo
+
+      locação e compra de livros
+        retirar um livro disponivel -
+        devolver um livro
+        compra de um livro
+
+    usuarios
+      cadastro de usuaraios
+        bibliotecario
+          Gerenciar.livros.catalogo
+        cliente
+          Gerenciar.livros.locação e compra
