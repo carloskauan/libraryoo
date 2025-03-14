@@ -10,7 +10,7 @@ Livraria
           GENERO
           
         cadastrar livros no catalogo - OK
-        excluir livros do catalogo
+        excluir livros do catalogo - ok
         alterar dados do livro no catalogo
 
       locação e compra de livros

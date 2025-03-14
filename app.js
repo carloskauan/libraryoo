@@ -22,10 +22,15 @@ function usersOptions(){
 function librarianOptions(){
   let escLibrarian;
   while(true){
-    escLibrarian = input("\nOpções de bibliotecario\n1 - Cadastrar livro\n3 - Ver Catalogo>>\n");
+    escLibrarian = input("\nOpções de bibliotecario\n1 - Cadastrar livro\n2 - Deletar Livro\n3 - Ver Catalogo \n>>");
     switch(escLibrarian){
       case "1":
         library.registerNewBook(solDataBook());
+        break;
+      case "2":
+        let idToDelete = Number(input("Id do livro a ser excloido"));
+
+        library.deleterBookForCatalogy(idToDelete);
         break;
       case "3":
         library.showAllBooks();

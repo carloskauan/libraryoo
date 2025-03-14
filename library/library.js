@@ -12,6 +12,14 @@ class Library{
 
     this.catalogy.push(newBook);
   }
+  deleterBookForCatalogy(id){
+    this.catalogy.forEach((book)=>{
+      if(book._id === id){
+        let idBook = this.catalogy.indexOf(book);
+        this.catalogy.splice(idBook, 1);
+      }
+    });
+  }
 
   showAllBooks(){
     this.catalogy.forEach((book)=>{
