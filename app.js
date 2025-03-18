@@ -13,6 +13,18 @@ function solDataBook(){
   }
   return inforBook;
 }
+function modifyDataBook(){
+  let idOrName = input("Digite ID ou Nome do livro a ser alterado\n>>")
+  let book = library.getBook(idOrName);
+  let ch = input(`Deseja alterar os dados do livro "${book.name}"?\n1 - Sim\n2 - Não\n>>`)
+  if(ch == "2"){
+    console.log("Cancelando alteração...")
+    input("Enter to continue...")
+    return
+  }
+  book.showBookInf()
+  library.modifyDataBook(book ,solDataBook())
+}
 //Librarian handler
 
 //General Options
@@ -22,17 +34,20 @@ function usersOptions(){
 function librarianOptions(){
   let escLibrarian;
   while(true){
-    escLibrarian = input("\nOpções de bibliotecario\n1 - Cadastrar livro\n2 - Deletar Livro\n3 - Ver Catalogo \n>>");
+    escLibrarian = input("\nOpções de bibliotecario\n1 - Cadastrar livro\n2 - Deletar Livro\n3 - Alterar livro\n4 - Ver Catalogo \n>>");
     switch(escLibrarian){
       case "1":
         library.registerNewBook(solDataBook());
         break;
       case "2":
-        let idToDelete = Number(input("Id do livro a ser excloido"));
+        let idToDelete = Number(input("Id do livro a ser excloido\n"));
 
         library.deleterBookForCatalogy(idToDelete);
         break;
       case "3":
+        modifyDataBook()
+        break;
+      case "4":
         library.showAllBooks();
         break;
     }

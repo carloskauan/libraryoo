@@ -8,11 +8,14 @@ Livraria
           AUTHOR
           PREÇO - COMPRA E locação
           GENERO
-          
+
         cadastrar livros no catalogo - OK
         excluir livros do catalogo - ok
-        alterar dados do livro no catalogo
-
+        alterar dados do livro no catalogo 0k
+          buscar livro por dado(nome/id) ok
+          solicitar o tipo da alteração ok
+          salvar as alteração ok
+          
       locação e compra de livros
         retirar um livro disponivel -
         devolver um livro
